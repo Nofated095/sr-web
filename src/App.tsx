@@ -1,8 +1,7 @@
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
-import CameraIcon from '@mui/icons-material/PhotoCamera';
+import LyricsIcon from '@mui/icons-material/Lyrics';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -22,7 +21,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Renaissance Project
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -40,9 +39,9 @@ export default function Album() {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <CameraIcon sx={{ mr: 2 }} />
+          <LyricsIcon sx={{ mr: 2 }} />
           <Typography variant="h6" color="inherit" noWrap>
-            Album layout
+            Renaissance Project
           </Typography>
         </Toolbar>
       </AppBar>
@@ -63,12 +62,11 @@ export default function Album() {
               color="text.primary"
               gutterBottom
             >
-              Album layout
+              Renaissance Project
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so folks
-              don&apos;t simply skip over it entirely.
+              文艺复兴，我董力😘
+              这里可以有更多的描述。
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -100,16 +98,18 @@ export default function Album() {
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Music Title
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the
-                      content.
+                      Tags: Maimai Music
+                    </Typography>
+                    <Typography>
+                      C88, Vocal
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                    <Button size="small">Flac</Button>
+                    <Button size="small">Download</Button>
                   </CardActions>
                 </Card>
               </Grid>
@@ -120,7 +120,7 @@ export default function Album() {
       {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          Renaissance Project
         </Typography>
         <Typography
           variant="subtitle1"
@@ -128,7 +128,7 @@ export default function Album() {
           color="text.secondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          文艺复兴，我董力
         </Typography>
         <Copyright />
       </Box>
