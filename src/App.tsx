@@ -15,14 +15,14 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import ToggleButton from '@mui/material/ToggleButton';
-import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
+import InfoIcon from '@mui/icons-material/Info';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="#">
         Renaissance Project
       </Link>{' '}
       {new Date().getFullYear()}
@@ -98,9 +98,12 @@ export default function Album() {
                     image="https://cdn.nofated.win/avatarsoss"
                     alt="Lyric Cover"
                   />
+                  <ToggleButton value="center" key="center" href="https://vndb.org">
+                    <LyricsIcon />
+                  </ToggleButton>
                   <ToggleButton value="center" key="center">
-                    <FormatAlignCenterIcon />
-                  </ToggleButton>,
+                    <InfoIcon />
+                  </ToggleButton>
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
                       Music Title
