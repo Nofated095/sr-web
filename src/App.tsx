@@ -15,6 +15,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import ToggleButton from '@mui/material/ToggleButton';
+import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
+import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function Copyright() {
@@ -104,12 +106,6 @@ export default function Album() {
                     <Typography gutterBottom variant="h5" component="h2">
                       Music Title
                     </Typography>
-                    <Typography>
-                      Tags: Maimai Music
-                    </Typography>
-                    <Typography>
-                      C88, Vocal
-                    </Typography>
                   </CardContent>
                   <CardActions>
                     <Button size="small">Flac</Button>
@@ -134,6 +130,9 @@ export default function Album() {
         >
           文艺复兴，我董力
         </Typography>
+        <Button variant="contained" href="https://discord.gg/">
+          Discord
+        </Button>
         <Copyright />
       </Box>
       {/* End footer */}
