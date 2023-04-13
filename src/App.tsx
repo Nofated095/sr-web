@@ -94,7 +94,6 @@ export default function Album() {
                     sx={{
                       // 16:9
                       // pt: '56.25%',
-                      pt: '100%',
                     }}
                     image="https://cdn.nofated.win/avatarsoss"
                     alt="Lyric Cover"
