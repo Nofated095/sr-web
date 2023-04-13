@@ -16,7 +16,6 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import ToggleButton from '@mui/material/ToggleButton';
 import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
-import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function Copyright() {
@@ -77,8 +76,8 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
+              <Button variant="contained">View the Manual</Button>
+              <Button variant="outlined">GitHub</Button>
             </Stack>
           </Container>
         </Box>
