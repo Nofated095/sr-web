@@ -16,7 +16,6 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import ToggleButton from '@mui/material/ToggleButton';
 import InfoIcon from '@mui/icons-material/Info';
-import Grid from '@mui/material/Unstable_Grid2';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function Copyright() {
