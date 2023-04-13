@@ -14,6 +14,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import ToggleButton from '@mui/material/ToggleButton';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function Copyright() {
@@ -96,6 +97,9 @@ export default function Album() {
                     image="https://cdn.nofated.win/avatarsoss"
                     alt="Lyric Cover"
                   />
+                  <ToggleButton value="center" key="center">
+                    <FormatAlignCenterIcon />
+                  </ToggleButton>,
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
                       Music Title
