@@ -31,9 +31,31 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 const theme = createTheme();
+
+const songs = [
+  {
+    title: '什么？',
+    cover: 'https://cdn.nofated.win/mc',
+    vndb: 'r74911',
+    play: './111.html',
+    flac: 'dllink',
+  },
+  {
+    title: '什么？2',
+    cover: 'https://cdn.nofated.win/avatarsoss',
+    vndb: 'r97151',
+    play: './111.html',
+    flac: 'dllink',
+  },
+  {
+    title: '什么？33123123',
+    cover: 'https://cdn.nofated.win/mc',
+    vndb: 'r97150',
+    play: './111.html',
+    flac: 'dllink',
+  },
+];
 
 export default function Album() {
   return (
@@ -84,8 +106,8 @@ export default function Album() {
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+            {songs.map((songs) => (
+              <Grid item key={songs.title} xs={12} sm={6} md={4}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
@@ -95,12 +117,12 @@ export default function Album() {
                       // 16:9
                       // pt: '56.25%',
                     }}
-                    image="https://cdn.nofated.win/avatarsoss"
-                    alt="Lyric Cover"
+                    image={songs.cover}
+                    alt={songs.title}
                   />
                   <Grid container spacing={0}>
                     <Grid xs={6}>
-                      <ToggleButton value="center" key="center" href="https://vndb.org">
+                      <ToggleButton value="center" key="center" href={"https://vndb.org/" + songs.vndb}>
                         <LyricsIcon />
                       </ToggleButton>
                     </Grid>
@@ -112,7 +134,7 @@ export default function Album() {
                   </Grid>
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Music Title
+                      {songs.title}
                     </Typography>
                   </CardContent>
                   <CardActions>
