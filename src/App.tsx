@@ -63,6 +63,20 @@ const songs = [
     play: '/page/SR/index.html',
     flac: 'dllink',
   },
+  {
+    title: 'SR05',
+    cover: '/page/SR/SR05/img/songtitle_zh.jpg',
+    vndb: 'r74911',
+    play: '/page/SR/index.html',
+    flac: 'dllink',
+  },
+  {
+    title: 'SR06',
+    cover: '/page/SR/SR06/img/songtitle_zh.jpg',
+    vndb: 'r74911',
+    play: '/page/SR/index.html',
+    flac: 'dllink',
+  },
 ];
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
@@ -227,9 +241,6 @@ export default function main() {
         </Typography>
         <Button variant="contained" href="https://discord.gg/">
           Discord
-        </Button>
-        <Button variant="contained" href="./page/SR/index.html">
-          Play
         </Button>
         <Copyright />
       </Box>
