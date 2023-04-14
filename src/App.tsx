@@ -36,24 +36,31 @@ const theme = createTheme();
 
 const songs = [
   {
-    title: '什么？',
-    cover: 'https://cdn.nofated.win/mc',
+    title: 'SR01',
+    cover: '/page/SR/SR01/img/songtitle.jpg',
     vndb: 'r74911',
-    play: './111.html',
+    play: '/page/SR/index.html',
     flac: 'dllink',
   },
   {
-    title: '什么？2',
-    cover: 'https://cdn.nofated.win/avatarsoss',
-    vndb: 'r97151',
-    play: './111.html',
+    title: 'SR02',
+    cover: '/page/SR/SR02/img/songtitle_zh.jpg',
+    vndb: 'r74911',
+    play: '/page/SR/index.html',
     flac: 'dllink',
   },
   {
-    title: '什么？33123123',
-    cover: 'https://cdn.nofated.win/mc',
-    vndb: 'r97150',
-    play: './111.html',
+    title: 'SR03',
+    cover: '/page/SR/SR03/img/songtitle_zh.jpg',
+    vndb: 'r74911',
+    play: '/page/SR/index.html',
+    flac: 'dllink',
+  },
+  {
+    title: 'SR04',
+    cover: '/page/SR/SR04/img/songtitle_zh.jpg',
+    vndb: 'r74911',
+    play: '/page/SR/index.html',
     flac: 'dllink',
   },
 ];
@@ -196,7 +203,7 @@ export default function main() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">Flac</Button>
+                    <Button size="small" href={songs.play}>Play</Button>
                     <Button size="small">Download</Button>
                   </CardActions>
                 </Card>
@@ -220,6 +227,9 @@ export default function main() {
         </Typography>
         <Button variant="contained" href="https://discord.gg/">
           Discord
+        </Button>
+        <Button variant="contained" href="./page/SR/index.html">
+          Play
         </Button>
         <Copyright />
       </Box>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <center>
+            <p>test</p>
+            <br>
+            <-------------------------------------------------------------->
+                <br>
+                <div>
+                    <canvas style="width: 600px; background-color: rgb(255, 255, 255);" id="draw_all"></canvas>
+                </div>
+                <-------------------------------------------------------------->
+        </center>
+        <p>test</p>
+        <center>
+
+            <br>
+            <-------------------------------------------------------------->
+                <br>
+                <div>
+                    <canvas style="width: 800px; background-color: rgb(255, 255, 255);" id="draw_result"></canvas>
+                </div>
+                <-------------------------------------------------------------->
+        </center>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    const draw_result = document.getElementById("draw_result");
+    draw_result.width = 800;
+    draw_result.height = 200;
+
+    var draw_result_ctx = draw_result.getContext('2d');
+
+    function draw_result_table(ctx, height, width, row, col) {
+        var i;
+        for (i = 0; i <= row; i++) {
+            ctx.moveTo(0, i * height);
+            ctx.lineTo(ctx.canvas.width, i * height);
+        }
+        for (i = 0; i <= col; i++) {
+            ctx.moveTo(i * width, 0);
+            ctx.lineTo(i * height, ctx.canvas.height);
+        }
+        ctx.stroke()
+
+    }
+    draw_result_ctx.fillStyle = "red";
+    draw_result_ctx.fillStyle = "green";
+    class Print_Result {
+        constructor() {
+            this.width = 20
+            this.height = 20
+            this.row = 10
+            this.col = 40
+        }
+        init() {
+            draw_result_ctx.clearRect(0, 0, draw_result.width, draw_result.height);
+            draw_result_table(draw_result_ctx, 20, 20, 10, 40)
+        }
+        output(cur_count, cur_result) {
+            let cur_output_row = Math.floor(cur_count % 10);
+            let cur_output_col = Math.floor(cur_count / 10);
+            draw_result_ctx.fillStyle = cur_result
+            draw_result_ctx.fillRect(cur_output_col * this.width, cur_output_row * this.height, this.width, this.height)
+        }
+
+    }
+    var print_result = new Print_Result();
+
+</script>
